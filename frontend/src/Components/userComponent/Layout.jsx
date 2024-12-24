@@ -1,15 +1,15 @@
 import React from 'react'
-import Homepage from '../userComponent/Homepage'
 import { Outlet } from 'react-router-dom';
 import Navbar from '../userComponent/Navbar';
+import Footer from './Footer';
 
 
 const Layout = () => {
     return (
         <>
             <Navbar />
-            <Homepage />
             <Outlet />
+            <Footer />
         </>
     )
 }

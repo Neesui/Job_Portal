@@ -38,14 +38,14 @@ export default function Navbar() {
 
         {/* Auth Buttons */}
         <div className="flex items-center font-semibold">
-          <Link to="/login">
+          <Link to="/">
             <button className="px-4 py-2 bg-red-500 text-white hover:bg-[#36BA98] rounded-lg mr-5">
               Login
             </button>
           </Link>
-          <Link to="/signup">
+          <Link to="/Register.jsx">
             <button className="px-4 py-2 bg-blue-500 text-white hover:bg-[#756AB6] rounded-lg">
-              Sign up
+              Register
             </button>
           </Link>
         </div>
