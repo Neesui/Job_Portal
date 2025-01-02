@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -35,9 +37,19 @@ const Register = () => {
         setErrors(validationErrors);
 
         if (Object.keys(validationErrors).length === 0) {
-            // Submit form data
+            // Show success toast
+            toast.success("Registration successful!");
             console.log("Form data submitted", formData);
-            // You can add API calls here to register the user
+            // Reset form after submission
+            setFormData({
+                name: "",
+                email: "",
+                password: "",
+                confirmPassword: "",
+            });
+        } else {
+            // Show error toast
+            toast.error("Please fix the errors in the form.");
         }
     };
 
@@ -118,6 +130,9 @@ const Register = () => {
                     Register
                 </button>
             </form>
+
+            {/* Toast Container */}
+            <ToastContainer position="top-center" />
         </div>
     );
 };
